@@ -1,0 +1,24 @@
+.goods-wrapper {
+  display: grid;
+  grid-row-gap: 28px;
+}
+
+.goods-header {
+  display: flex;
+}
+
+.goods-header {
+  display: inline-grid;
+  width: 96%;
+  grid-template-columns: 2fr 16fr 3fr 3fr 3fr;
+}
+
+.goods-header__item {
+  font-size: 13px;
+  font-weight: 600;
+  width: 100%;
+}
+
+.controls_wrapper {
+  display: flex;
+}
