@@ -49,10 +49,6 @@ const sortReducer = (state = initialState, action) => {
                 return [...state].sort(sortTimeByKeyMin('end_date'))
             }
             break
-        case "GET_FULL_LIST":
-            console.log('fff', console.log(state))
-            return state
-
         default:
             return state
     }

@@ -19,9 +19,6 @@ function GoodsList() {
 
     const getAllList = () => {
         setGoodListWithFilter(goods)
-        dispatch({
-            type: "GET_FULL_LIST",
-        })
     }
 
     return <div className="goods-page">
