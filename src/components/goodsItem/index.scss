@@ -24,19 +24,24 @@
 
 .goods-item {
   display: grid;
-  grid-template-columns: 0fr 6fr 3fr;
+  grid-template-columns: 0fr 4fr 3fr;
+  align-items: center;
 }
-
 .goods-item__info {
   font-size: 14px;
   color: #4d5969;
-  font-weight: 1000;
+  font-weight: 500;
   display: flex;
   width: 5%;
   align-self: center;
+  text-align: center;
 }
 
 .goods-item-extra {
   display: flex;
   grid-gap: 35%;
+}
+
+.goods-item__link {
+  text-decoration: none;
 }

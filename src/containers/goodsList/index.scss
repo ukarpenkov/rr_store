@@ -10,13 +10,13 @@
 .goods-header {
   display: inline-grid;
   width: 96%;
-  grid-template-columns: 2fr 16fr 3fr 3fr 3fr;
+  grid-template-columns: 2fr 13fr 3fr 3fr 3fr;
 }
 
 .goods-header__item {
-  font-size: 13px;
+  color: #4d5969;
   font-weight: 600;
-  width: 100%;
+  font-size: 13px;
 }
 
 .controls_wrapper {
