@@ -1,3 +1,6 @@
+$nameColor: #4d5969;
+$categoryColor: #9da8ba;
+
 .goods-item__picture {
   width: 60px;
   height: 40px;
@@ -12,14 +15,14 @@
   font-size: 16px;
   font-weight: 500;
   letter-spacing: 0.65px;
-  color: #4d5969;
+  color: $nameColor;
 }
 
 .goods-item__category {
   font-weight: 400;
   font-size: 13px;
   letter-spacing: 0.6px;
-  color: #9da8ba;
+  color: $categoryColor;
 }
 
 .goods-item {
@@ -27,19 +30,25 @@
   grid-template-columns: 0fr 4fr 3fr;
   align-items: center;
 }
+
 .goods-item__info {
+  position: relative;
   font-size: 14px;
-  color: #4d5969;
+  color: $nameColor;
   font-weight: 500;
   display: flex;
   width: 5%;
-  align-self: center;
-  text-align: center;
+  &:nth-child(2) {
+    left: 8px;
+  }
+  &:first-child {
+    left: 10px;
+  }
 }
 
 .goods-item-extra {
   display: flex;
-  grid-gap: 35%;
+  grid-gap: 31%;
 }
 
 .goods-item__link {

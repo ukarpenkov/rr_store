@@ -1,3 +1,5 @@
+$itemColor: #4d5969;
+
 .goods-wrapper {
   display: grid;
   grid-row-gap: 28px;
@@ -10,15 +12,20 @@
 .goods-header {
   display: inline-grid;
   width: 96%;
-  grid-template-columns: 2fr 13fr 3fr 3fr 3fr;
+  grid-template-columns: 2fr 19fr 5fr 5fr 3fr;
 }
 
 .goods-header__item {
-  color: #4d5969;
+  color: $itemColor;
   font-weight: 600;
   font-size: 13px;
+  text-align: left;
 }
 
 .controls_wrapper {
-  display: flex;
+  display: grid;
+  grid-template-columns: 6fr 4fr;
+  align-items: center;
+  margin-top: 50px;
+  margin-bottom: 20px;
 }

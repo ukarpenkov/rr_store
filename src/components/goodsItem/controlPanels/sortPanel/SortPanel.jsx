@@ -41,11 +41,11 @@ function SortPanel() {
 
 
     return <div className="sort-panel">
-        <div>Сортировать:</div>
-        <div onClick={() => sortByName()}>По названию{isSortedByName ? '↓' : '↑'}</div>
-        <div onClick={() => sortByViews()}>по просмотрам{isSortedByViews ? '↓' : '↑'}</div>
-        <div onClick={() => sortByStartDate()}>по дате начала{isSortedByStartDate ? '↓' : '↑'}</div>
-        <div onClick={() => sortByEndDate()}>по дате окончания{isSortedByEndDate ? '↓' : '↑'}</div>
+        <div className='sort-panel__info-text'>Сортировать:</div>
+        <div className='sort-panel__btn' onClick={() => sortByName()}>по названию{isSortedByName ? '↓' : '↑'}</div>
+        <div className='sort-panel__btn' onClick={() => sortByViews()}>по просмотрам{isSortedByViews ? '↓' : '↑'}</div>
+        <div className='sort-panel__btn' onClick={() => sortByStartDate()}>по дате начала{isSortedByStartDate ? '↓' : '↑'}</div>
+        <div className='sort-panel__btn' onClick={() => sortByEndDate()}>по дате окончания{isSortedByEndDate ? '↓' : '↑'}</div>
     </div>
 }
 

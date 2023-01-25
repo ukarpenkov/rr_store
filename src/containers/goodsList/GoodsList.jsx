@@ -7,8 +7,6 @@ import { useEffect, useState } from "react";
 
 
 function GoodsList() {
-    const dispatch = useDispatch()
-
     const goods = useSelector(state => state.goods)
     const filteredData = useSelector(state => state.filteredGoods)
     const [goodListWithFilter, setGoodListWithFilter] = useState(goods.filter(good => good.name.toLowerCase().includes(filteredData.toLowerCase())))
