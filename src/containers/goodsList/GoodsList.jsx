@@ -8,17 +8,21 @@ import SearchInput from "../../components/goodsItem/controlPanels/searchInput/Se
 
 
 function GoodsList() {
-
+    const dispatch = useDispatch()
     const goods = useSelector(state => state.goods)
 
-
+    const getAllList = () => {
+        dispatch({
+            type: "GET_FULL_LIST",
+        })
+    }
 
     return <div className="goods-page">
         <div className="controls_wrapper">
             <SortPanel />
             <SearchInput />
         </div>
-        <div className="goods-wrapper">
+        {goods.length ? <div className="goods-wrapper">
             <div className="goods-header">
                 <div className="goods-header__item">Фото</div>
                 <div className="goods-header__item">Название</div>
@@ -28,7 +32,13 @@ function GoodsList() {
             </div>
             {goods.map(item => <GoodsItem {...item} key={item.name} />)}
 
+        </div> : <div>
+            <h1>
+                Такого товара нет!
+            </h1>
+            <button onClick={() => getAllList()}>Перейти ко всему списку</button>
         </div>
+        }
     </div>
 
 }

@@ -15,7 +15,7 @@ const sortByKeyMin = key => (a, b) => a[key] > b[key] ? 1 : -1
 const sortByKeyMax = key => (a, b) => a[key] < b[key] ? 1 : -1
 const sortTimeByKeyMin = key => (a, b) => Date.parse(new Date(a[key])) > Date.parse(new Date(b[key])) ? 1 : -1
 const sortTimeByKeyMax = key => (a, b) => Date.parse(new Date(a[key])) < Date.parse(new Date(b[key])) ? 1 : -1
-const goodsReducer = (state = initialState, action) => {
+const sortReducer = (state = initialState, action) => {
     switch (action.type) {
         case "SORT_BY_NAME":
             if (!action.payload) {
@@ -49,10 +49,20 @@ const goodsReducer = (state = initialState, action) => {
                 return [...state].sort(sortTimeByKeyMin('end_date'))
             }
             break
+        case "SEARCH_GOODS":
+            if (action.payload !== '') {
+                let filteredGoods = [...state]
+                return [...filteredGoods].slice().filter(item => item.name.toLocaleLowerCase().includes(action.payload.toLocaleLowerCase()))
+            }
+            break
+        case "GET_FULL_LIST":
+            console.log(state)
+            return state
+
         default:
             return state
     }
 }
 
 
-export default goodsReducer
+export default sortReducer
