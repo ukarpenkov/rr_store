@@ -49,14 +49,8 @@ const sortReducer = (state = initialState, action) => {
                 return [...state].sort(sortTimeByKeyMin('end_date'))
             }
             break
-        case "SEARCH_GOODS":
-            if (action.payload !== '') {
-                let filteredGoods = [...state]
-                return [...filteredGoods].slice().filter(item => item.name.toLocaleLowerCase().includes(action.payload.toLocaleLowerCase()))
-            }
-            break
         case "GET_FULL_LIST":
-            console.log(state)
+            console.log('fff', console.log(state))
             return state
 
         default:
