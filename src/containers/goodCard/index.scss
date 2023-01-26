@@ -1,0 +1,77 @@
+$sale_red: #f63a3a;
+
+.good-card-wrapper {
+  margin: 0 auto;
+  width: 100%;
+}
+.good-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.good-card-header__logo {
+  width: 10em;
+}
+
+.good-card-header__sale {
+  display: flex;
+  align-items: center;
+  width: 70px;
+  height: 36px;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 22px;
+  background-color: $sale_red;
+  border-radius: 10px 0px 0px 10px;
+  text-align: center;
+}
+
+.rec {
+  position: relative;
+  left: 17.5px;
+  top: 0px;
+  display: block;
+  height: 26px;
+  width: 26px;
+  background-color: $sale_red;
+  border: inherit;
+  bottom: -10px;
+  clip-path: polygon(0% 0%, 100% 100%, 0% 100%);
+  transform: rotate(225deg);
+  border-radius: 0 0 0 0.25em;
+}
+
+.back-button_link {
+  font-size: 18px;
+  color: #344050;
+  text-decoration: none;
+  padding-left: -20px;
+}
+
+.good-card-main {
+  display: grid;
+  &-info {
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr 1fr;
+  }
+  &__picture {
+    width: 415px;
+  }
+  &__name {
+    position: relative;
+    top: 30px;
+    left: -76px;
+    font-weight: 750;
+    font-size: 37.6651px;
+    color: #344050;
+    width: 540px;
+    line-height: 120%;
+    letter-spacing: 0.8px;
+  }
+  &-prices-and-rate {
+    position: relative;
+    display: grid;
+  }
+}

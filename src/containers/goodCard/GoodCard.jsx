@@ -1,3 +1,4 @@
+import './index.scss'
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 
@@ -8,22 +9,25 @@ function GoodCard() {
     console.log(good.new_price);
     console.log(good.old_price);
     return <div className="good-card-wrapper">
+
         <div className="back-button">
-            <Link to='/' >◁ назад</Link>
+            <Link to='/' className="back-button_link" >◁ Назад</Link>
         </div>
         <div className="good-card">
             <div className="good-card-header">
                 <div className="good-card-header__sale">
-                    {good.discount}
+                    <p>-{good.discount}%</p>
+                    <div className='rec'></div>
                 </div>
-                <div className="good-card-header__logo">
-                    <img src={good.logo_url} alt="" />
+                <div className="good-card-header__logo-wrapper">
+                    <img className="good-card-header__logo" src={good.logo_url} alt="" />
                 </div>
             </div>
             <div className="good-card-main">
                 <div className="good-card-main-info">
-                    <div className="good-card-main__image">
-                        <img src={good.image_url} alt="" />
+                    <div className="good-card-main__picture-wrapper">
+                        <img className="good-card-main__picture" src={good.image_url} alt="" />
+
                     </div>
                     <div className="good-card-main__name">
                         <p>{good.name}</p>
