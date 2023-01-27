@@ -29,3 +29,22 @@ $itemColor: #4d5969;
   margin-top: 50px;
   margin-bottom: 20px;
 }
+
+.go-back-btn {
+  text-decoration: none;
+  display: inline-block;
+  color: rgb(255, 253, 253);
+  padding: 20px 30px;
+  margin-top: 20px;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border: none;
+  background-color: #d18605;
+  background-size: 200% auto;
+}
+
+.no-goods {
+  display: grid;
+  justify-items: center;
+}

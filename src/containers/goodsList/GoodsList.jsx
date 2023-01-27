@@ -9,7 +9,8 @@ import { useEffect, useState } from "react";
 function GoodsList() {
     const goods = useSelector(state => state.goods)
     const filteredData = useSelector(state => state.filteredGoods)
-    const [goodListWithFilter, setGoodListWithFilter] = useState(goods.filter(good => good.name.toLowerCase().includes(filteredData.toLowerCase())))
+    const goodsWithFilter = async () => await goods.filter(good => good.name.toLowerCase().includes(filteredData.toLowerCase()))
+    const [goodListWithFilter, setGoodListWithFilter] = useState(goodsWithFilter)
 
     useEffect(() => {
         setGoodListWithFilter(goods.filter(good => good.name.toLowerCase().includes(filteredData.toLowerCase())))
@@ -34,11 +35,11 @@ function GoodsList() {
             </div>
             {goodListWithFilter.map(item => <GoodsItem {...item} key={item.name} />)}
 
-        </div> : <div>
+        </div> : <div className="no-goods">
             <h1>
                 Такого товара нет!
             </h1>
-            <button onClick={() => getAllList()}>Перейти ко всему списку</button>
+            <button className="go-back-btn" onClick={() => getAllList()}>Перейти ко всему списку</button>
         </div>
         }
     </div>
