@@ -1,8 +1,7 @@
 import './index.scss'
 
-function RatingStars({ props }) {
+function RatingStars({ props, priceType }) {
 
-    console.log(props);
     return <div className="rating-area">
         <input type="radio" id="star-5" name="rating" value="5" checked={props === 5 ? true : false} onChange={e => { }} />
         <label htmlFor="star-5" title="Оценка «5»"></label>

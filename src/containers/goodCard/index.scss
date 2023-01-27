@@ -4,20 +4,34 @@ $sale_red: #f63a3a;
   margin: 0 auto;
   width: 100%;
 }
+
 .good-card-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100%;
+  width: 83%;
+  padding-left: 108px;
 }
+
 .good-card-header__logo {
   width: 10em;
 }
 
+.back-button {
+  margin-top: 25px;
+  position: relative;
+  left: 25px;
+}
+
+.good-card {
+  margin-top: 5%;
+}
+
 .good-card-header__sale {
   display: flex;
+  justify-content: space-between;
   align-items: center;
-  width: 70px;
+  width: 83px;
   height: 36px;
   color: #ffffff;
   font-weight: 600;
@@ -27,9 +41,14 @@ $sale_red: #f63a3a;
   text-align: center;
 }
 
+.good-card-header__sale p {
+  position: relative;
+  left: 14px;
+}
+
 .rec {
   position: relative;
-  left: 17.5px;
+  left: 11.5px;
   top: 0px;
   display: block;
   height: 26px;
@@ -58,15 +77,17 @@ $sale_red: #f63a3a;
   grid-template-rows: 2fr 1fr 1fr;
   grid-template-columns: 2fr 1fr 1fr;
   grid-gap: 10px;
+
   &__picture-wrapper {
     grid-area: img;
-    display: grid;
+    margin-left: 120px;
   }
+
   &__name {
     grid-area: name;
     position: relative;
     top: 30px;
-    left: -76px;
+    left: -20px;
     font-weight: 750;
     font-size: 37.6651px;
     color: #344050;
@@ -74,40 +95,44 @@ $sale_red: #f63a3a;
     line-height: 120%;
     letter-spacing: 0.8px;
   }
+
   &__rating {
     grid-area: rating;
+    position: relative;
+    right: 70px;
+    bottom: 6px;
   }
+
   &__old-price {
     grid-area: old-price;
+    position: relative;
+    bottom: 43px;
+    right: 16px;
   }
+
   &__new-price {
     grid-area: new-price;
+    position: relative;
+    bottom: 65px;
+    right: 54px;
   }
 }
 
 .good-card-main__picture {
   width: 415px;
+  height: 415px;
 }
-// &-info {
-//   display: grid;
-//   justify-items: center;
-//   grid-template-columns: 1fr 1fr;
-// }
-// &__picture {
-//   width: 415px;
-// }
-// &__name {
-// position: relative;
-// top: 30px;
-// left: -76px;
-// font-weight: 750;
-// font-size: 37.6651px;
-// color: #344050;
-// width: 540px;
-// line-height: 120%;
-// letter-spacing: 0.8px;
-// }
-// &-prices-and-rate {
-//   position: relative;
-//   display: grid;
-// }
+
+.good-card-bottom {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 157px;
+  margin-top: 50px;
+  color: #6f7885;
+  background: rgba(217, 217, 217, 0.22);
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+}

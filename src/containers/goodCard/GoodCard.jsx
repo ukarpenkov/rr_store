@@ -2,14 +2,12 @@ import './index.scss'
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
 import RatingStars from '../../components/rating/RatingStars';
-import OldPrice from '../../components/oldPrice/OldPrice';
+import Price from '../../components/price/Price';
 
 
 function GoodCard() {
     const good = useSelector(state => state.currentGood)
 
-    console.log(good.new_price);
-    console.log(good.old_price);
     return <div className="good-card-wrapper">
 
         <div className="back-button">
@@ -17,10 +15,11 @@ function GoodCard() {
         </div>
         <div className="good-card">
             <div className="good-card-header">
-                <div className="good-card-header__sale">
-                    <p>-{good.discount}%</p>
-                    <div className='rec'></div>
-                </div>
+                {Number(good.discount) === 0 ? <div>&nbsp;</div> :
+                    <div className="good-card-header__sale">
+                        <p>-{good.discount}%</p>
+                        <div className='rec'></div>
+                    </div>}
                 <div className="good-card-header__logo-wrapper">
                     <img className="good-card-header__logo" src={good.logo_url} alt="" />
                 </div>
@@ -36,11 +35,10 @@ function GoodCard() {
                     <RatingStars props={good.stars} />
                 </div>
                 <div className="good-card-main__old-price">
-                    <OldPrice props={good.old_price} />
+                    <Price price={good.old_price} priceType='old' />
                 </div>
                 <div className="good-card-main__new-price">
-                    <div>{good.new_price ? good.new_price : <p>Уточните цену по телефону!</p>}</div>
-                    <div>цена по акции</div>
+                    <Price price={good.new_price} priceType='new' />
                 </div>
             </div>
             <div className="good-card-bottom">
