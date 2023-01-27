@@ -9,11 +9,15 @@ import { useEffect, useState } from "react";
 function GoodsList() {
     const goods = useSelector(state => state.goods)
     const filteredData = useSelector(state => state.filteredGoods)
-    const goodsWithFilter = async () => await goods.filter(good => good.name.toLowerCase().includes(filteredData.toLowerCase()))
+    const goodsWithFilter = goods.filter(good => good.name.toLowerCase().includes(filteredData.toLowerCase()))
     const [goodListWithFilter, setGoodListWithFilter] = useState(goodsWithFilter)
 
+    // useEffect(() => {
+    //     localStorage.setItem('searching-result', JSON.stringify(goodListWithFilter))
+    // }, [])
+
     useEffect(() => {
-        setGoodListWithFilter(goods.filter(good => good.name.toLowerCase().includes(filteredData.toLowerCase())))
+        setGoodListWithFilter(goodsWithFilter)
     }, [filteredData, goods])
 
     const getAllList = () => {
