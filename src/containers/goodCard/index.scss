@@ -51,15 +51,19 @@ $sale_red: #f63a3a;
 
 .good-card-main {
   display: grid;
-  &-info {
+  grid-template-areas:
+    'img name name'
+    'img none rating'
+    'img old-price new-price';
+  grid-template-rows: 2fr 1fr 1fr;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-gap: 10px;
+  &__picture-wrapper {
+    grid-area: img;
     display: grid;
-    justify-items: center;
-    grid-template-columns: 1fr 1fr;
-  }
-  &__picture {
-    width: 415px;
   }
   &__name {
+    grid-area: name;
     position: relative;
     top: 30px;
     left: -76px;
@@ -70,8 +74,40 @@ $sale_red: #f63a3a;
     line-height: 120%;
     letter-spacing: 0.8px;
   }
-  &-prices-and-rate {
-    position: relative;
-    display: grid;
+  &__rating {
+    grid-area: rating;
+  }
+  &__old-price {
+    grid-area: old-price;
+  }
+  &__new-price {
+    grid-area: new-price;
   }
 }
+
+.good-card-main__picture {
+  width: 415px;
+}
+// &-info {
+//   display: grid;
+//   justify-items: center;
+//   grid-template-columns: 1fr 1fr;
+// }
+// &__picture {
+//   width: 415px;
+// }
+// &__name {
+// position: relative;
+// top: 30px;
+// left: -76px;
+// font-weight: 750;
+// font-size: 37.6651px;
+// color: #344050;
+// width: 540px;
+// line-height: 120%;
+// letter-spacing: 0.8px;
+// }
+// &-prices-and-rate {
+//   position: relative;
+//   display: grid;
+// }

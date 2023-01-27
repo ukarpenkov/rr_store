@@ -1,0 +1,40 @@
+.old-price {
+  display: grid;
+  justify-items: center;
+  justify-content: start;
+  font-family: 'Poppins';
+  font-style: normal;
+  color: #94979c;
+  font-size: 32.5px;
+  &-values {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+  }
+  &__rubbles {
+    font-weight: 600;
+  }
+  &__pennies {
+    position: relative;
+    top: 4px;
+    font-weight: 600;
+    font-size: 18px;
+    vertical-align: super;
+  }
+  &__rub-sign {
+    font-family: 'Arial';
+    font-weight: 900;
+  }
+  &__describe {
+    font-weight: 600;
+    font-size: 18px;
+    color: #6f7885;
+    text-transform: uppercase;
+  }
+  &__line {
+    position: relative;
+    top: -25px;
+    height: 0px;
+    border-bottom: solid red;
+  }
+}

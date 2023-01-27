@@ -1,6 +1,8 @@
 import './index.scss'
 import { useSelector } from "react-redux"
 import { Link } from "react-router-dom"
+import RatingStars from '../../components/rating/RatingStars';
+import OldPrice from '../../components/oldPrice/OldPrice';
 
 
 function GoodCard() {
@@ -24,36 +26,27 @@ function GoodCard() {
                 </div>
             </div>
             <div className="good-card-main">
-                <div className="good-card-main-info">
-                    <div className="good-card-main__picture-wrapper">
-                        <img className="good-card-main__picture" src={good.image_url} alt="" />
-
-                    </div>
-                    <div className="good-card-main__name">
-                        <p>{good.name}</p>
-                    </div>
+                <div className="good-card-main__picture-wrapper">
+                    <img className="good-card-main__picture" src={good.image_url} alt="" />
                 </div>
-                <div className="good-card-main-prices-and-rate">
-                    <div className="good-card-main-prices-and-rate__rating">
-                        ★★★★★ {good.stars}
-                    </div>
-                    <div className="good-card-main-prices-and-rate__old-price">
-                        <div>{good.old_price}</div>
-                        <div>старая цена</div>
-                    </div>
-                    <div className="good-card-main-prices-and-rate__price">
-                        <div>{good.new_price ? good.new_price : <p>Уточните цену по телефону!</p>}</div>
-                        <div>цена по акции</div>
-                    </div>
+                <div className="good-card-main__name">
+                    <p>{good.name}</p>
+                </div>
+                <div className="good-card-main__rating">
+                    <RatingStars props={good.stars} />
+                </div>
+                <div className="good-card-main__old-price">
+                    <OldPrice props={good.old_price} />
+                </div>
+                <div className="good-card-main__new-price">
+                    <div>{good.new_price ? good.new_price : <p>Уточните цену по телефону!</p>}</div>
+                    <div>цена по акции</div>
                 </div>
             </div>
             <div className="good-card-bottom">
                 {good.disclaimer}
             </div>
-
-
         </div>
-        {good.name}
     </div>
 }
 
