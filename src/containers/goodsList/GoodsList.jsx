@@ -4,6 +4,7 @@ import './index.scss'
 import SortPanel from "../../components/goodsItem/controlPanels/sortPanel/SortPanel";
 import SearchInput from "../../components/goodsItem/controlPanels/searchInput/SearchInput";
 import { useEffect, useState } from "react";
+import Pagination from "../../components/pagination/Pagination";
 
 
 function GoodsList() {
@@ -12,9 +13,29 @@ function GoodsList() {
     const goodsWithFilter = goods.filter(good => good.name.toLowerCase().includes(filteredData.toLowerCase()))
     const [goodListWithFilter, setGoodListWithFilter] = useState(goodsWithFilter)
 
-    // useEffect(() => {
-    //     localStorage.setItem('searching-result', JSON.stringify(goodListWithFilter))
-    // }, [])
+    const totalGoods = goodsWithFilter.length
+    const [currentPage, setCurrentPage] = useState(1)
+    const [goodsPerPage, setGoodsPerPage] = useState(totalGoods)
+    const lastGoodIndex = currentPage * goodsPerPage
+    const firstGoodIndex = lastGoodIndex - goodsPerPage
+    const currentGoods = goods.slice(firstGoodIndex, lastGoodIndex)
+
+
+    const paginate = pageNumber => setCurrentPage(pageNumber)
+    const nextPage = () => setCurrentPage(prev => {
+        if (prev === (totalGoods / goodsPerPage)) {
+            return prev
+        }
+        return prev + 1
+    })
+    const prevPage = () => setCurrentPage(prev => {
+        if (prev === 1) {
+            return prev
+        }
+        return prev - 1
+
+    })
+
 
     useEffect(() => {
         setGoodListWithFilter(goodsWithFilter)
@@ -29,6 +50,16 @@ function GoodsList() {
             <SortPanel />
             <SearchInput />
         </div>
+        <div>
+            <Pagination
+                goodsPerPage={goodsPerPage}
+                totalGoods={totalGoods}
+                paginate={paginate}
+                setGoodsPerPage={setGoodsPerPage}
+                nextPage={nextPage}
+                prevPage={prevPage}
+            />
+        </div>
         {goodListWithFilter.length ? <div className="goods-wrapper">
             <div className="goods-header">
                 <div className="goods-header__item">Фото</div>
@@ -37,7 +68,7 @@ function GoodsList() {
                 <div className="goods-header__item">Начало ротации</div>
                 <div className="goods-header__item">Конец ротации</div>
             </div>
-            {goodListWithFilter.map(item => <GoodsItem {...item} key={item.name} />)}
+            {currentGoods.map(item => <GoodsItem {...item} key={item.name} />)}
 
         </div> : <div className="no-goods">
             <h1>

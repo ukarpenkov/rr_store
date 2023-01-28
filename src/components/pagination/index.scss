@@ -1,0 +1,22 @@
+.pagination {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 20px;
+  &__btn {
+    width: 36px;
+    height: 32px;
+    background: #ffffff;
+    border: 1px solid #ffffff;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.08),
+      0px 1px 1.5px rgba(0, 0, 0, 0.07), 0px 2px 5px rgba(43, 45, 80, 0.08),
+      0px 0px 0px 1px rgba(43, 45, 80, 0.1);
+    border-radius: 2px;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    color: #4d5969;
+  }
+  &__select {
+    width: 60px;
+  }
+}
