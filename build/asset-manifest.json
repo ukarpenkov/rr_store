@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/rr_store/static/css/main.1b4f375e.css",
+    "main.js": "/rr_store/static/js/main.6f7558a1.js",
+    "static/js/787.84d11612.chunk.js": "/rr_store/static/js/787.84d11612.chunk.js",
+    "index.html": "/rr_store/index.html",
+    "main.1b4f375e.css.map": "/rr_store/static/css/main.1b4f375e.css.map",
+    "main.6f7558a1.js.map": "/rr_store/static/js/main.6f7558a1.js.map",
+    "787.84d11612.chunk.js.map": "/rr_store/static/js/787.84d11612.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1b4f375e.css",
+    "static/js/main.6f7558a1.js"
+  ]
+}
