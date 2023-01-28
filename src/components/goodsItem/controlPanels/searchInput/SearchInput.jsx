@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react'
 
 
 function SearchInput() {
+    const dispatch = useDispatch()
     const [searchTerm, setSearchTerm] = useState('')
 
     const keydownHandler = ({ key }) => {
@@ -13,14 +14,7 @@ function SearchInput() {
                 break;
             default:
         }
-    };
-
-    useEffect(() => {
-        document.addEventListener('keydown', keydownHandler);
-        return () => document.removeEventListener('keydown', keydownHandler);
-    });
-    const dispatch = useDispatch()
-
+    }
 
     const findGoods = () => {
         dispatch({
@@ -30,9 +24,25 @@ function SearchInput() {
         setSearchTerm('')
     }
 
+    useEffect(() => {
+        document.addEventListener('keydown', keydownHandler)
+        return () => document.removeEventListener('keydown', keydownHandler)
+    })
+
+
     return <div className='search-instruments'>
-        <button className="search-instruments__input-btn" onClick={() => findGoods()}></button>
-        <input className="search-instruments__input-field" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} type="text" placeholder="Поиск..." />
+        <button
+            className='search-instruments__input-btn'
+            onClick={() => findGoods()}
+        >
+        </button>
+        <input
+            className='search-instruments__input-field'
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+            type='text'
+            placeholder='Поиск...'
+        />
     </div>
 }
 
