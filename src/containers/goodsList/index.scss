@@ -26,7 +26,6 @@ $itemColor: #4d5969;
   display: grid;
   grid-template-columns: 6fr 4fr;
   align-items: center;
-  margin-top: 50px;
 }
 
 .go-back-btn {
@@ -46,4 +45,12 @@ $itemColor: #4d5969;
 .no-goods {
   display: grid;
   justify-items: center;
+}
+
+.goods-page__header {
+  color: #344050;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 22px;
+  margin-top: 60px;
 }

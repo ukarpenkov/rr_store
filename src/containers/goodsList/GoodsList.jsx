@@ -23,7 +23,7 @@ function GoodsList() {
 
     const paginate = pageNumber => setCurrentPage(pageNumber)
     const nextPage = () => setCurrentPage(prev => {
-        if (prev === (totalGoods / goodsPerPage)) {
+        if (prev >= (totalGoods / goodsPerPage)) {
             return prev
         }
         return prev + 1
@@ -46,6 +46,7 @@ function GoodsList() {
     }
 
     return <div className="goods-page">
+        <h1 className="goods-page__header">Карточки контента</h1>
         <div className="controls_wrapper">
             <SortPanel />
             <SearchInput />
