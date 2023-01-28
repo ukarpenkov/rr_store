@@ -1,20 +1,21 @@
+$baseTextColor: #4d5969;
+$standardFontSize: 16px;
+
 .sort-panel {
   display: flex;
   column-gap: 15px;
-}
-
-.sort-panel__btn {
-  color: #2a7be4;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 0.8px;
-  cursor: pointer;
-  user-select: none;
-}
-
-.sort-panel__info-text {
-  color: #4d5969;
-  font-weight: 500;
-  font-size: 16px;
-  letter-spacing: 0.8px;
+  &__btn {
+    color: #2a7be4;
+    font-weight: 500;
+    font-size: $standardFontSize;
+    letter-spacing: 0.8px;
+    cursor: pointer;
+    user-select: none;
+  }
+  &__info-text {
+    color: $baseTextColor;
+    font-weight: 500;
+    font-size: $standardFontSize;
+    letter-spacing: 0.8px;
+  }
 }

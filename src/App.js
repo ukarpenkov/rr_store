@@ -1,7 +1,7 @@
 
-import { Route, BrowserRouter as Router, Routes } from "react-router-dom";
-import GoodsList from "./containers/goodsList/GoodsList";
-import GoodCard from "./containers/goodCard/GoodCard";
+import { Route, BrowserRouter as Router, Routes } from "react-router-dom"
+import GoodsList from "./containers/goodsList/GoodsList"
+import GoodCard from "./containers/goodCard/GoodCard"
 
 
 

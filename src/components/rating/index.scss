@@ -1,3 +1,5 @@
+$darkGray: #344050;
+
 .rating-area {
   overflow: hidden;
   width: 265px;
@@ -19,7 +21,7 @@
   font-size: 40px;
 }
 .rating-area > input:checked ~ label {
-  color: #344050;
+  color: $darkGray;
 }
 
 .rate-area > label:active {

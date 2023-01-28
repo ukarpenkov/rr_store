@@ -1,4 +1,5 @@
 $itemColor: #4d5969;
+$darkGray: #344050;
 
 .goods-wrapper {
   display: grid;
@@ -6,20 +7,15 @@ $itemColor: #4d5969;
 }
 
 .goods-header {
-  display: flex;
-}
-
-.goods-header {
   display: inline-grid;
   width: 96%;
   grid-template-columns: 2fr 19fr 5fr 5fr 3fr;
-}
-
-.goods-header__item {
-  color: $itemColor;
-  font-weight: 600;
-  font-size: 13px;
-  text-align: left;
+  &__item {
+    color: $itemColor;
+    font-weight: 600;
+    font-size: 13px;
+    text-align: left;
+  }
 }
 
 .controls_wrapper {
@@ -48,7 +44,7 @@ $itemColor: #4d5969;
 }
 
 .goods-page__header {
-  color: #344050;
+  color: $darkGray;
   font-style: normal;
   font-weight: 600;
   font-size: 22px;

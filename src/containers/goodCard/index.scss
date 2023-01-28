@@ -1,20 +1,10 @@
 $sale_red: #f63a3a;
+$darkGray: #344050;
+$lightGray: #6f7885;
 
 .good-card-wrapper {
   margin: 0 auto;
   width: 100%;
-}
-
-.good-card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 83%;
-  padding-left: 108px;
-}
-
-.good-card-header__logo {
-  width: 10em;
 }
 
 .back-button {
@@ -25,25 +15,100 @@ $sale_red: #f63a3a;
 
 .good-card {
   margin-top: 5%;
-}
+  &-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 83%;
+    padding-left: 108px;
+    &__logo {
+      width: 10em;
+    }
+    &__sale {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 83px;
+      height: 36px;
+      color: #ffffff;
+      font-weight: 600;
+      font-size: 22px;
+      background-color: $sale_red;
+      border-radius: 10px 0px 0px 10px;
+      text-align: center;
+      & p {
+        position: relative;
+        left: 14px;
+      }
+    }
+  }
+  &-main {
+    display: grid;
+    grid-template-areas:
+      'img name name'
+      'img none rating'
+      'img old-price new-price';
+    grid-template-rows: 2fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 10px;
 
-.good-card-header__sale {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 83px;
-  height: 36px;
-  color: #ffffff;
-  font-weight: 600;
-  font-size: 22px;
-  background-color: $sale_red;
-  border-radius: 10px 0px 0px 10px;
-  text-align: center;
-}
+    &__picture-wrapper {
+      grid-area: img;
+      margin-left: 120px;
+    }
 
-.good-card-header__sale p {
-  position: relative;
-  left: 14px;
+    &__name {
+      grid-area: name;
+      position: relative;
+      top: 30px;
+      left: -20px;
+      font-weight: 750;
+      font-size: 37.6651px;
+      color: $darkGray;
+      width: 540px;
+      line-height: 120%;
+      letter-spacing: 0.8px;
+    }
+
+    &__rating {
+      grid-area: rating;
+      position: relative;
+      right: 70px;
+      bottom: 6px;
+    }
+
+    &__old-price {
+      grid-area: old-price;
+      position: relative;
+      bottom: 43px;
+      right: 16px;
+    }
+
+    &__new-price {
+      grid-area: new-price;
+      position: relative;
+      bottom: 65px;
+      right: 54px;
+    }
+
+    &__picture {
+      width: 415px;
+      height: 415px;
+    }
+  }
+  &-bottom {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    width: 100%;
+    height: 157px;
+    margin-top: 50px;
+    color: $lightGray;
+    background: rgba(217, 217, 217, 0.22);
+    font-style: normal;
+    font-weight: 600;
+    font-size: 22px;
+  }
 }
 
 .rec {
@@ -63,76 +128,7 @@ $sale_red: #f63a3a;
 
 .back-button_link {
   font-size: 18px;
-  color: #344050;
+  color: $darkGray;
   text-decoration: none;
   padding-left: -20px;
-}
-
-.good-card-main {
-  display: grid;
-  grid-template-areas:
-    'img name name'
-    'img none rating'
-    'img old-price new-price';
-  grid-template-rows: 2fr 1fr 1fr;
-  grid-template-columns: 2fr 1fr 1fr;
-  grid-gap: 10px;
-
-  &__picture-wrapper {
-    grid-area: img;
-    margin-left: 120px;
-  }
-
-  &__name {
-    grid-area: name;
-    position: relative;
-    top: 30px;
-    left: -20px;
-    font-weight: 750;
-    font-size: 37.6651px;
-    color: #344050;
-    width: 540px;
-    line-height: 120%;
-    letter-spacing: 0.8px;
-  }
-
-  &__rating {
-    grid-area: rating;
-    position: relative;
-    right: 70px;
-    bottom: 6px;
-  }
-
-  &__old-price {
-    grid-area: old-price;
-    position: relative;
-    bottom: 43px;
-    right: 16px;
-  }
-
-  &__new-price {
-    grid-area: new-price;
-    position: relative;
-    bottom: 65px;
-    right: 54px;
-  }
-}
-
-.good-card-main__picture {
-  width: 415px;
-  height: 415px;
-}
-
-.good-card-bottom {
-  display: grid;
-  justify-items: center;
-  align-items: center;
-  width: 100%;
-  height: 157px;
-  margin-top: 50px;
-  color: #6f7885;
-  background: rgba(217, 217, 217, 0.22);
-  font-style: normal;
-  font-weight: 600;
-  font-size: 22px;
 }

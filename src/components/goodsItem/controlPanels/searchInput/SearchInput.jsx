@@ -8,7 +8,7 @@ function SearchInput() {
 
     const keydownHandler = ({ key }) => {
         switch (key) {
-            case 'Enter':
+            case "Enter":
                 findGoods()
                 break;
             default:
@@ -31,8 +31,8 @@ function SearchInput() {
     }
 
     return <div className='search-instruments'>
-        <button className="search__input-btn" onClick={() => findGoods()}></button>
-        <input className="search__input-field" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} type="text" placeholder="Поиск..." />
+        <button className="search-instruments__input-btn" onClick={() => findGoods()}></button>
+        <input className="search-instruments__input-field" value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} type="text" placeholder="Поиск..." />
     </div>
 }
 

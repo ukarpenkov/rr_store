@@ -1,3 +1,6 @@
+$darkGray: #344050;
+$lightGray: #6f7885;
+
 .old-price {
   display: grid;
   justify-items: center;
@@ -32,7 +35,7 @@
   justify-content: start;
   font-family: 'Poppins';
   font-style: normal;
-  color: #344050;
+  color: $darkGray;
   font-size: 52.0364px;
   position: relative;
   bottom: 5px;
@@ -55,13 +58,18 @@
     font-family: 'Arial';
     font-weight: 900;
   }
+  &__no-rubbles {
+    font-weight: 600;
+    font-size: 25px;
+    text-align: center;
+  }
 }
 
 .price__describe {
   font-family: 'Roboto';
   font-weight: 600;
   font-size: 18px;
-  color: #6f7885;
+  color: $lightGray;
   text-transform: uppercase;
 }
 
@@ -69,11 +77,5 @@
   position: relative;
   top: -25px;
   height: 0px;
-  border-bottom: solid red;
-}
-
-.new-price__no-rubbles {
-  font-weight: 600;
-  font-size: 25px;
-  text-align: center;
+  border-bottom: solid #ff0000;
 }

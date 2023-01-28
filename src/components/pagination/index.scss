@@ -1,3 +1,5 @@
+$baseTextColor: #4d5969;
+
 .pagination {
   display: flex;
   gap: 8px;
@@ -14,7 +16,7 @@
     font-style: normal;
     font-weight: 600;
     font-size: 16px;
-    color: #4d5969;
+    color: $baseTextColor;
   }
   &__select {
     width: 60px;

@@ -13,34 +13,34 @@ function SortPanel() {
     const sortByName = () => {
         setIsSortedByName(!isSortedByName)
         dispatch({
-            type: "SORT_BY_NAME",
+            type: 'SORT_BY_NAME',
             payload: isSortedByName
         })
     }
     const sortByViews = () => {
         setIsSortedByViews(!isSortedByViews)
         dispatch({
-            type: "SORT_BY_VIEWS",
+            type: 'SORT_BY_VIEWS',
             payload: isSortedByViews
         })
     }
     const sortByStartDate = () => {
         setIsSortedByStartDate(!isSortedByStartDate)
         dispatch({
-            type: "SORT_BY_START_DATE",
+            type: 'SORT_BY_START_DATE',
             payload: isSortedByStartDate
         })
     }
     const sortByEndDate = () => {
         setIsSortedByEndDate(!isSortedByEndDate)
         dispatch({
-            type: "SORT_BY_END_DATE",
+            type: 'SORT_BY_END_DATE',
             payload: isSortedByEndDate
         })
     }
 
 
-    return <div className="sort-panel">
+    return <div className='sort-panel'>
         <div className='sort-panel__info-text'>Сортировать:</div>
         <div className='sort-panel__btn' onClick={() => sortByName()}>по названию{isSortedByName ? '↓' : '↑'}</div>
         <div className='sort-panel__btn' onClick={() => sortByViews()}>по просмотрам{isSortedByViews ? '↓' : '↑'}</div>
