@@ -1,7 +1,7 @@
 {
+  "homepage": "https://ukarpenkov.github.io/rr_store/",
   "name": "rr_store",
   "version": "0.1.0",
-  "homepage": "https://ukarpenkov.github.io/rr_store/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
