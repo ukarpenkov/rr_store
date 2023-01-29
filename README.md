@@ -1,4 +1,4 @@
-# https://ukarpenkov.github.io/rr_store/
+# https://ukarpenkov.github.io/rr_store/ GH-PAGES LINK
 
 ## Технические требования
 
