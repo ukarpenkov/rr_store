@@ -1,4 +1,4 @@
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import GoodsItem from '../../components/goodsItem/GoodsItem'
 import './index.scss'
 import SortPanel from '../../components/goodsItem/controlPanels/sortPanel/SortPanel'
